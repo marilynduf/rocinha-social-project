@@ -1,0 +1,52 @@
+@import 'components/components';
+
+
+// Nav 
+
+nav {
+  color: $c-main-dark;
+  font-family: 'Barlow Condensed', 'arial', sans-serif;
+  font-size: 2rem;
+  margin-left: 2rem;
+  li {
+    padding-bottom: 1rem;
+    transition: 0.3s; 
+    z-index:99;
+    :hover {
+      color:$c-li-hover;
+      transition: 0.3s; 
+    }
+    :last-child {
+      padding-bottom: 0; 
+    }
+  }
+}
+
+// Home Nav
+
+.nav-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+  
+.home-nav{ 
+    z-index:999;
+    font-family: 'Barlow Condensed', 'arial', sans-serif;
+    &__item{
+      font-size: 5rem;
+      color: $c-main;
+      text-align: center;
+      font-size: 5rem;
+    }
+    nav{
+      font-size: 5rem;
+      color: $c-main;
+      text-align: center;
+        li:hover {
+          color:$c-li-hover;
+          transition: 0.3s;
+    }
+  }
+}

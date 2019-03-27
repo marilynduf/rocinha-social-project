@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) {
+    .aside{
+        display: none;
+    }
+    .aside__title{
+        position: unset;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .section__title{
+        position: unset;
+        left: 0rem!important;
+    }
+}
+
+ 

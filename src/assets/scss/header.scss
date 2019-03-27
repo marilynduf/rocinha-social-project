@@ -1,0 +1,31 @@
+@import 'components/components';
+
+.header{
+
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  max-width: 1200px;
+  // height: 100vh;
+  margin: 0 auto; 
+  
+  &__intro {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-family: 'Carrois Gothic', 'arial', sans-serif;
+    max-width: 83rem;
+    margin-bottom: 20rem;
+    margin-top: 10rem;
+  }
+
+  .wrap{
+    display:flex;
+    flex-direction:column; 
+    align-items:center;
+  }
+
+  main-nav a{
+    font-size: 9rem;
+    z-index: 99;
+  }
+}

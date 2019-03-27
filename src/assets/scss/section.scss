@@ -1,0 +1,67 @@
+@import 'components/components';
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    max-width: 1024px;
+    margin-bottom: 8rem;
+    &__bloc {
+      width: 100%;
+      margin-right: 2rem;
+      &:last-child{
+        margin-right: 0rem;
+      }
+      .wrapper{
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    &__title{
+      font-family: 'Gothic725', 'arial', sans-serif;
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      position: relative;
+      left: -7rem;
+    }
+    &__text{
+      font-size: 2.2rem;
+      font-family: 'Carrois Gothic', 'arial', sans-serif;
+      line-height: 3.2rem;
+      margin-bottom: 2rem;
+    }
+    &__image{
+      width: 100%;
+      border-radius: 0.2rem;
+      max-width: 650px;
+    }
+    &__description{
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+    }
+    &__credit{
+      display: flex;
+      margin-top: 0.2rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      .credit{
+        margin-right: 1rem;
+      }
+    }
+    &__intro {
+      font-size: 3.4rem;
+      text-align: center;
+      line-height: 4.5rem; 
+      font-family: 'Carrois Gothic', 'arial', sans-serif;
+      padding: 0rem 4rem;
+    }
+
+    main-nav a{
+      font-size: 9rem;
+      z-index: 99;
+    }
+  }
+

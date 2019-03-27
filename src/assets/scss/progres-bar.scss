@@ -1,0 +1,36 @@
+#audioplayer{
+    width: 100px;
+    height: 100px;
+    border: solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	
+}
+
+#pButton{
+    height: 80px; 
+    width: 80px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:left;
+    outline:none;
+}
+
+.play{
+	background: url('../img/play.svg');
+}
+.pause{
+	background: url('../img/pause.svg');
+}
+#playhead{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 0, 0,1);
+
+}

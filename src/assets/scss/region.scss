@@ -1,0 +1,58 @@
+@import 'components/components';
+
+.geography{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: $c-main;
+    &__logo-wrap{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: absolute;
+    }
+    &__item{
+        color: #72b1ff;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $c-main-mid-dark;
+        transition: 0.2s;
+        &--lighter{
+            background-color: rgba($c-main-mid-dark, 0.95) ;
+        }
+
+        &--bg-lighter{
+            background-color: rgba($c-main, $alpha: 0.1) ;;
+        }
+        &--rocinha{
+            background-image: url(../img/dessins/collage-dessin.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover{
+                background-color:  rgba($c-main-dark, $alpha: 1) ;
+               
+            }
+        }
+    }
+    &__title{
+       text-align: center;
+       &--disabled{
+           opacity: 0.25;
+       }
+    }
+    &__district{
+        font-family: 'BRUX', 'arial', sans-serif;
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+    }
+    &__country{
+        font-family: 'Barlow Condensed', 'arial', sans-serif;
+        font-size: 2.8rem;
+    }
+}

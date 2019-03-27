@@ -1,0 +1,121 @@
+@import 'components/components';
+
+.menu{
+    background-color:  rgb(37, 63, 136);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    .container{
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      z-index: 9;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__lien{
+      font-family: 'Barlow Condensed', 'arial', sans-serif;
+      font-size: 3rem;
+      color: $c-main;
+      text-decoration: underline;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      margin-left: 4rem;
+      z-index:999;
+    }
+    .lien-wrap{
+      margin-top: 3rem;
+    }
+   
+}
+.language {
+  display: flex;
+  justify-content: space-between;
+  width: 16rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-family: 'Barlow Condensed', 'arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  color: $c-main;
+  align-items: center;
+  li {
+    &:hover {
+      color: $c-li-hover;
+      animation: 1s; 
+    }
+    &:last-child {
+      padding-bottom: 0;
+      opacity: 0.5; 
+    }
+  }
+} 
+
+
+  .home-bg-card{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    img{
+      width: 100%;
+      min-width: 150rem;
+      position: absolute;
+      top: -28.3%;
+    }
+  }
+
+  .participants{
+    color: $c-main;
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', 'arial', sans-serif;
+    font-weight: 200;
+    position: absolute;
+    left: 129px;
+    z-index: 9;
+    &__title{
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+      text-transform: uppercase;
+      
+    }
+    &__item{
+      margin-bottom: 0.5rem;
+      &:hover{
+        color: $c-li-hover;
+      }
+    }
+    .eperluette{
+      opacity: 0.5;
+      font-size: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .separator{
+    width: 10rem;
+    height: 1px;
+    background-color: $c-main;
+    margin: 0 auto;
+    opacity: 0.3;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    &-vertical{
+      width: 1px;
+      height: 5rem;
+      background-color: $c-main;
+      opacity: 0.3;
+    }
+    
+  }

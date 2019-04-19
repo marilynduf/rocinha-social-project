@@ -37,21 +37,24 @@
           <div class="participants__title">Participants :</div>
            
             <ul>
-              <li class="participants__item">Alexia Lima</li>
-              <li class="participants__item">Audrey da Costa</li>
-              <li class="participants__item">Bianca Oliva</li>
-              <li class="participants__item">Castelo Branco</li>
-              <li class="participants__item">Catharina Aiza Rego Marinho</li>
-              <li class="participants__item">Emmanuele</li>
-              <li class="participants__item">Eric</li>
-              <li class="participants__item">Juliane Cruz</li>
-              <li class="participants__item">Leiticia Ferreira Silva</li>
-              <li class="participants__item">Loane Carolina de Jesus Silva</li>
-              <li class="participants__item">Luma Gomes</li>
-              <li class="participants__item">Marcelle Rodrigues</li>
-              <li class="participants__item">Rozeline Silva</li>
-              <li class="participants__item">Thais Almeida</li>
-              <li class="participants__item">Wellington Perreira</li>
+              <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/alexia">Alexia Lima</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/audrey">Audrey da Costa</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/bianca">Bianca Oliva</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/castello">Castelo Branco</router-link></li>
+
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/catharina">Catharina Aiza Rego Marinho</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/emmanuele">Emmanuele</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/castello">Castelo Branco</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/eric">Eric</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/juliane">Juliane Cruz</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/leiticia">Leiticia Ferreira Silva</router-link></li>
+
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/loane">Loane Carolina de Jesus Silva</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/luma">Luma Gomes</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/marcelle">Marcelle Rodrigues</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/rozeline">Rozeline Silva</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/thais">Thais Almeida</router-link></li>
+                      <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/wellington">Wellington Perreira</router-link></li>
               <p class="eperluette">&</p>
               <li class="participants__item">Francine Saillant,<br>Lygia Segala & Antonio Carlos Firmino</li>
             </ul>

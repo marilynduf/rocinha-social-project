@@ -58,7 +58,6 @@
                       <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/rozeline">Rozeline Silva</router-link></li>
                       <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/thais">Thais Almeida</router-link></li>
                       <li class="participants__item" @click="$emit('close')"><router-link to="/creer/creer/wellington">Wellington Perreira</router-link></li>
-           
 
                       <p class="eperluette">&</p>
                       <li class="participants__item">Francine Saillant,<br>Lygia Segala & Antonio Carlos Firmino</li>

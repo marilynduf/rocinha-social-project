@@ -46,17 +46,24 @@
 
                             <div class="exposant__sound">
 
-                            <audio id="music" ref="music" preload="true">
-                                  <source src="../../assets/audio/MONO-002.wav" type="audio/ogg">
-                                  <source src="../../assets/audio/MONO-002.wav" type="audio/mpeg">
-                            </audio>
+                          <audio
+                              ref="music"
+                              preload="true"
+                              @play="setPlaying(true)"
+                              @pause="setPlaying(false)"
+                              @ended="setPlaying(false)">
+                                  <source src="../../assets/audio/alexia-atlelier2-002-A.mp3" type="audio/ogg">
+                                  <source src="../../assets/audio/alexia-atlelier2-002-A.ogg" type="audio/mpeg">
+                          </audio>
 
-                            <div id="audioplayer">
-                                <button @click="play()" id="pButton" class="play"></button>
-                                <!-- <div id="timeline">    
+                          <div id="audioplayer">
+                              <button @click="play()"
+                                  :class="{ play: !isPlaying, pause: isPlaying }" class="pButton" ></button>
+                              <!-- <div id="timeline">    
                                       <div id="playhead"></div>
-                                </div> -->
-                            </div>
+                              </div> -->
+                          </div>
+
                         </div>
                       </div>
                 
@@ -77,30 +84,29 @@ export default {
   name: "bianca",
   data() {
     return {
+       isPlaying: false
     };
   },
   mounted () {
     
   },
   methods: { 
-   
-    play() {
-        let music = document.getElementById('music');
-        let pButton = document.getElementById('pButton');
+  play() {
+        let music = this.$refs.music;
        
-
         if (music.paused) { 
           music.play();
-          pButton.className = "";
-          pButton.className = "pause";
         } 
-
         else { 
           music.pause();
-          pButton.className = "";
-          pButton.className = "play";
         }
     },
+    pause () {
+      this.$refs.music.pause();
+    },
+    setPlaying (isPlaying) {
+      this.isPlaying = isPlaying;
+    }
   },
 };
 

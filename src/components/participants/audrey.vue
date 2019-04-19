@@ -35,6 +35,7 @@
                     <div class="exposant__text">
 
                       <div class="exposant__wrap-pic-sound">
+
                         <div class="exposant__picture">
                           <img src="../../assets/img/participants/audrey-costa-350x435.jpg" alt="">
             
@@ -43,8 +44,14 @@
                           <!-- <img src="../assets/img/sound.svg" alt="sound icon"> -->
 
                             <div class="exposant__sound">
+                            
 
-                            <audio ref="music" preload="true">
+                            <audio
+                              ref="music"
+                              preload="true"
+                              @play="setPlaying(true)"
+                              @pause="setPlaying(false)"
+                              @ended="setPlaying(false)">
                                   <source src="../../assets/audio/MONO-002.wav" type="audio/ogg">
                                   <source src="../../assets/audio/MONO-002.wav" type="audio/mpeg">
                             </audio>
@@ -86,18 +93,22 @@ export default {
   },
   methods: { 
    
-     play() {
+    play() {
         let music = this.$refs.music;
        
         if (music.paused) { 
           music.play();
-          this.isPlaying = true;
         } 
         else { 
           music.pause();
-          this.isPlaying = false;
         }
     },
+    pause () {
+      this.$refs.music.pause();
+    },
+    setPlaying (isPlaying) {
+      this.isPlaying = isPlaying;
+    }
   },
 };
 

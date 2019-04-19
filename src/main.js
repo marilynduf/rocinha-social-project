@@ -10,6 +10,7 @@ import FooterPrismic from './components/FooterPrismic.vue'
 import AjiraHeader from './components/AjiraHeader.vue'
 import RocHeader from './components/rocHeader.vue'
 import Modal from './components/Modal.vue'
+// import ExposantSound from './components/exposantSound.vue'
 import Exposition from './components/exposition.vue'
 
 import Bianca from './components/participants/bianca.vue'
@@ -38,6 +39,7 @@ Vue.component('side-bar', SideBar);
 Vue.component('main-nav', MainNav);
 Vue.component('footer-prismic', FooterPrismic);
 Vue.component('modal', Modal);
+// Vue.component('exposant-sound', ExposantSound);
 Vue.component('exposition', Exposition);
 
 Vue.component('bianca', Bianca);

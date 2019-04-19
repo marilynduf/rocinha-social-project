@@ -40,23 +40,31 @@
             
                         </div>
                        
-
                           <!-- <img src="../assets/img/sound.svg" alt="sound icon"> -->
 
-                            <div class="exposant__sound">
+                          <div class="exposant__sound">
 
-                            <audio id="music" ref="music" preload="true">
-                                  <source src="../../assets/audio/MONO-002.wav" type="audio/ogg">
-                                  <source src="../../assets/audio/MONO-002.wav" type="audio/mpeg">
+                            <audio
+                              ref="music"
+                              preload="true"
+                              @play="setPlaying(true)"
+                              @pause="setPlaying(false)"
+                              @ended="setPlaying(false)">
+                                  <source src="../../assets/audio/alexia-atlelier2-002-A.mp3" type="audio/ogg">
+                                  <source src="../../assets/audio/alexia-atlelier2-002-A.ogg" type="audio/mpeg">
                             </audio>
 
                             <div id="audioplayer">
-                                <button @click="play()" id="pButton" class="play"></button>
+                                <button @click="play()"
+                                  :class="{ play: !isPlaying, pause: isPlaying }" class="pButton" ></button>
                                 <!-- <div id="timeline">    
                                       <div id="playhead"></div>
                                 </div> -->
                             </div>
+
                         </div>
+
+
                       </div>
                 
                       <div class="exposant__text">« Ça c’est Rocinha avec beaucoup de vert, et l’arc de la passerelle, et avec une phrase, soyez fort et courageux parce qu’ on a besoin de cela pour vivre ici, surtout si on est noir, et puis de l’autre côté. C’est Rocinha, avec l’eau qui arrive, des escaliers colorés, une piscine, des loisirs, que Rocinha soit un lieu de paix, comme avec la chute. »</div>
@@ -76,6 +84,7 @@ export default {
   name: "castelo",
   data() {
     return {
+      isPlaying: false
     };
   },
   mounted () {
@@ -84,22 +93,21 @@ export default {
   methods: { 
    
     play() {
-        let music = document.getElementById('music');
-        let pButton = document.getElementById('pButton');
+        let music = this.$refs.music;
        
-
         if (music.paused) { 
           music.play();
-          pButton.className = "";
-          pButton.className = "pause";
         } 
-
         else { 
           music.pause();
-          pButton.className = "";
-          pButton.className = "play";
         }
     },
+    pause () {
+      this.$refs.music.pause();
+    },
+    setPlaying (isPlaying) {
+      this.isPlaying = isPlaying;
+    }
   },
 };
 

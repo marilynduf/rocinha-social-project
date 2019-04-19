@@ -42,10 +42,9 @@
                           <img src="../../assets/img/participants/alexia-lima-350x435.jpg" alt="">
                         </div>
                     
+                        <div class="exposant__sound">
 
-                            <div class="exposant__sound">
-
-                            <audio
+                          <audio
                               ref="music"
                               preload="true"
                               @play="setPlaying(true)"
@@ -53,17 +52,18 @@
                               @ended="setPlaying(false)">
                                   <source src="../../assets/audio/alexia-atlelier2-002-A.mp3" type="audio/ogg">
                                   <source src="../../assets/audio/alexia-atlelier2-002-A.ogg" type="audio/mpeg">
-                            </audio>
+                          </audio>
 
-                            <div id="audioplayer">
-                                <button @click="play()"
+                          <div id="audioplayer">
+                              <button @click="play()"
                                   :class="{ play: !isPlaying, pause: isPlaying }" class="pButton" ></button>
-                                <!-- <div id="timeline">    
+                              <!-- <div id="timeline">    
                                       <div id="playhead"></div>
-                                </div> -->
-                            </div>
+                              </div> -->
+                          </div>
 
-                        </div>
+                      </div>
+                        
                       </div>
                 
                       <div class="exposant__text">« Une personne qui danse, qui ne fait que danser, et de l’autre côté, les deux côtés de l’amour, avec les bons et les mauvais côtés. »</div>
@@ -78,9 +78,9 @@
 
       </template>
 
-<script>
+      <script>
 export default {
-  name: "alexia",
+  name: "castelo",
   data() {
     return {
       isPlaying: false
@@ -89,7 +89,7 @@ export default {
   mounted () {
     
   },
-  methods: { 
+  methods: {   
     play() {
         let music = this.$refs.music;
        
@@ -110,3 +110,4 @@ export default {
 };
 
 </script>
+

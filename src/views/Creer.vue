@@ -55,6 +55,7 @@ export default {
         "leiticia",
         "loane",
         "luma",
+        "marcelle",
         "rozeline",
         "thais",
         "willington" 
@@ -73,7 +74,7 @@ export default {
           this.fields.intro = document.data.intro;
           this.fields.nom = document.data.nom;
           this.slices = document.data.body;
-        } 
+        }
         else {
           this.$router.push({ name: "not-found" });
         }

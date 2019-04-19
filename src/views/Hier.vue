@@ -1,6 +1,8 @@
 <template>
 
   <div class="container">
+  <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div> 
+
 
   <side-bar :title="fields.title"></side-bar>
 

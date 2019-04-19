@@ -75,6 +75,11 @@ export default new Router({
       component: Creer
     },
     {
+      path: '/creer/:uid/:exposant',
+      name: 'creer',
+      component: Creer
+    },
+    {
       path: '/transformer/:uid',
       name: 'transformer',
       component: Transformer

@@ -1,5 +1,6 @@
 <template>
-  <div id="creer"> 
+  <div id="creer">
+  <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div> 
 
     <div style="overflow-y:hidden;" class="container">
       <side-bar></side-bar>
@@ -9,65 +10,11 @@
     <div class="exposition__bg"></div>
 
     <flickity ref="flickity" :options="flickityOptions">
-      <div class="carousel-cell">
-        <alexia></alexia>
-      </div>
 
-       <div class="carousel-cell">
-        <audrey></audrey>
-      </div>
-      
-      <div class="carousel-cell">
-          <bianca></bianca>
-      </div>
+        <div class="carousel-cell" v-for="slideName in slideNames" :key="slideName">
+          <component :is="slideName" :ref="slideName"></component>
+        </div>
 
-      <div class="carousel-cell">
-        <castello></castello>
-      </div>
-
-       <div class="carousel-cell">
-          <catharina></catharina>
-      </div>
-
-      <div class="carousel-cell">
-          <emmanuelle></emmanuelle>
-      </div>
-
-      <div class="carousel-cell">
-        <eric></eric>
-      </div>
-
-      <div class="carousel-cell">
-          <juliane></juliane>
-      </div>
-
-      <div class="carousel-cell">
-          <leiticia></leiticia>
-      </div>
-
-       <div class="carousel-cell">
-          <loane></loane>
-      </div>
-
-       <div class="carousel-cell">
-          <luma></luma>
-      </div>
-
-       <div class="carousel-cell">
-          <marcelle></marcelle>
-      </div>
-
-       <div class="carousel-cell">
-          <rozeline></rozeline>
-      </div>
-
-       <div class="carousel-cell">
-          <thais></thais>
-      </div>
-
-        <div class="carousel-cell">
-          <willington></willington>
-      </div>
     </flickity>
 
 </div>
@@ -95,8 +42,27 @@ export default {
       flickityOptions: {
         pageDots: true,
         wrapAround: true
-      }
+      },
+      slideNames: [
+        "alexia", 
+        "audrey",
+        "bianca",
+        "castello",
+        "catharina",
+        "emmanuelle",
+        "eric",
+        "juliane",
+        "leiticia",
+        "loane",
+        "luma",
+        "rozeline",
+        "thais",
+        "willington" 
+      ]
     };
+  },
+  watch: {
+    $route: 'changeSlide'
   },
   methods: { 
     getContent(uid) {
@@ -113,9 +79,29 @@ export default {
         }
       });
     },
+    changeSlide () {
+      const exposant = this.$route.params.exposant;
+      if (exposant) {
+        const slideIndex = this.slideNames.indexOf(exposant);
+        this.$refs.flickity.select(slideIndex);
+        window.scrollTo(0, 100000000000);
+      }
+    }
   },
   created() {
     this.getContent(this.$route.params.uid);
+  },
+  mounted() {
+    const self = this;
+    this.changeSlide();
+    this.$refs.flickity.on("change", () => {
+      self.slideNames.forEach(slideName => {
+        const child = self.$refs[slideName];
+        if (child[0]) {
+          child[0].pause();
+        }
+      });
+    });
   },
   beforeRouteUpdate(to, from, next) {
     this.getContent(to.params.uid);

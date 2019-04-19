@@ -2,10 +2,7 @@
 
     <header class="header">
 
-        <h1><img style="width:60%;" src="../assets/img/rocinha-logo-2.svg" alt="Rocinha"><br> <span style="    font-size: 5rem;
-    position: relative;
-    top: -29px;
-}"> Rio de Janeiro, Brésil</span>
+      <h1><img style="width:60%;" src="../assets/img/rocinha-logo-2.svg" alt="Rocinha"><br> <span class="city"> Rio de Janeiro, Brésil</span>
        </h1>
 
        <div class="aside__title">

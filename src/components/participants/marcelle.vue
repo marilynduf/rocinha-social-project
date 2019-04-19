@@ -15,16 +15,14 @@
                           <p class="exposant__draw-title">Recto</p>
                     
               
-                          <img style="    min-width: 35rem;
-    min-height: 28rem;" src="../../assets/img/dessins/Marcelle-recto-200px32.jpg" alt="">
+                          <img src="../../assets/img/dessins/Marcelle-recto-200px32.jpg" alt="">
                         </div>
                       </div>
 
                       <div class="exposant__draw">
                         <div class="wrapper-img wrapper-img--2">
                           <p class="exposant__draw-title">Verso</p>
-                          <img style="    min-width: 35rem;
-    min-height: 28rem;" src="../../assets/img/dessins/Marcelle-verso-200px33.jpg" alt="">
+                          <img src="../../assets/img/dessins/Marcelle-verso-200px33.jpg" alt="">
                         </div>
                       </div>
 

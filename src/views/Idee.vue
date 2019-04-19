@@ -2,11 +2,11 @@
 
 <div>
 
-<div class="logo-ajira">Ajira</div>
+ <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div> 
 
 <div class="idee">
-
-      <h2 class="idee__h2">À propos</h2>
+<!-- 
+      <h2 class="idee__h2">À propos</h2> -->
 
       <h3 class="idee__h3">Que veut dire ce mot, AJIRA?</h3>
       <p class="idee__text">

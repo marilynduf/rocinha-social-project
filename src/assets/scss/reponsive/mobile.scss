@@ -1,0 +1,128 @@
+@media (max-width: 480px) {
+    h1{
+        span{
+           
+                font-size: 2.8rem;
+                font-family: 'Barlow Condensed', 'arial', sans-serif;
+              }
+        
+    }
+    .header__intro {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .aside__h2{
+        font-size: 3.8rem;
+        margin-right: 0rem;
+        margin-top: 2.3rem;
+    }
+    .menu{
+        .container{
+            width: 100%;
+        }
+        .separator-mobile{
+            display: block;
+            margin-bottom: 1.8rem;
+        }
+    }
+    .geography{
+        &__district {
+            font-size: 3rem;
+        }
+        &__country{
+            font-size: 2.2rem;
+        }
+
+    }
+    .section{
+        iframe{
+            width: 100%;
+        }
+    }
+    .participants{
+            margin-bottom: 2rem;
+    }
+    .logo-rocinha {
+        width: 60%;
+    }
+    .idee {
+        padding: 2rem 2rem;
+    }
+    .menu{
+        overflow: scroll;
+    }
+    .home-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #audioplayer {
+        width: 56px;
+        height: 56px;
+    }
+    .container-exposant{
+        padding-top: 6rem;
+    }
+    .exposant{
+        &__picture{
+            img{
+                width: 12rem;
+            }
+        }
+    }
+
+    #creer{
+        .flickity-prev-next-button .flickity-button-icon {
+            width: 40%;
+            height: 40%;
+        }
+        .flickity-prev-next-button.next {
+            right: 0px;
+        }
+        .flickity-prev-next-button.previous {
+            left: 0px;
+        }
+    }  
+}
+
+@media (max-width: 700px) {
+    .container-exposant {
+        overflow-x: scroll;
+        padding: 4rem;
+        padding-top: 6rem;
+    }
+    .exposant{
+        flex-direction: column;
+        &__name{
+            font-size: 4rem !important;
+        }
+        &__draw{
+            margin-right: 0rem;
+            .wrapper-img {
+                margin-right: 1rem;
+            }
+            .wrapper-img--2 {
+                margin-top: 0rem;
+                margin-right: 0rem;
+                margin-left: 1rem;
+            }
+        }
+        &__wrap1{
+            width: 100%;
+        }
+        &__wrap-img{
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+    
+    }
+
+  
+    .exposant__wrap-pic-sound {
+    
+    }
+    .exposant__sound {
+        margin-left: 0rem;
+    }
+}
+

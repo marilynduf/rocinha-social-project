@@ -16,7 +16,6 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
     &__lien{
       font-family: 'Barlow Condensed', 'arial', sans-serif;
@@ -79,15 +78,12 @@
     font-size: 2rem;
     font-family: 'Barlow Condensed', 'arial', sans-serif;
     font-weight: 200;
-    position: absolute;
-    left: 129px;
+    text-align: center;
     z-index: 9;
     &__title{
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 400;
       margin-bottom: 1rem;
-      opacity: 0.5;
-      text-transform: uppercase;
       
     }
     &__item{
@@ -109,8 +105,11 @@
     background-color: $c-main;
     margin: 0 auto;
     opacity: 0.3;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
+    &-mobile{
+      display: none;
+  }
     &-vertical{
       width: 1px;
       height: 5rem;

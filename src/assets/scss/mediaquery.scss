@@ -1,9 +1,18 @@
 @media only screen and (max-width: 768px) {
     .aside{
         display: none;
+        &__h2 {
+            margin-right: 0rem;
+        }
     }
     .aside__title{
         position: unset;
+    }
+    .idee {
+        padding: 2rem 4rem;
+    }
+    .container {
+        padding: 4rem;
     }
 }
 
@@ -11,6 +20,12 @@
     .section__title{
         position: unset;
         left: 0rem!important;
+    }
+    .aside{
+        display: none;
+        &__h2 {
+            margin-right: 0rem;
+        }
     }
 }
 

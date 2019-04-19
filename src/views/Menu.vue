@@ -4,19 +4,38 @@
 
     <div class="modal-mask">
 
-      <!-- <div @click="$emit('close')" class="close"></div> -->
+  
 
       <section class="menu"> 
 
         <div class="container">
+        <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div> 
 
         <h1><img class="logo-rocinha" src="../assets/img/rocinha-logo.svg" alt="Rocinha"></h1>
 
       <div class="home-nav">
+         <nav>
+            <li class="home-nav__item"><router-link to="/idee/idee">L'idée</router-link></li>
+                
+              <div class="separator"></div>
+
+              <ul>
+                  <li @click="$emit('close')"><router-link to="/hier/hier">Hier</router-link></li>
+                  <li @click="$emit('close')"><router-link to="/aujourdhui/aujourdhui">Aujourd'hui</router-link></li>
+                  <li @click="$emit('close')"><router-link to="/voir/voir">Voir</router-link></li>
+                  <li @click="$emit('close')"><router-link to="/creer/creer">Créer</router-link></li>
+                  <li @click="$emit('close')"><router-link to="/transformer/transformer">Transformer</router-link></li>
+              </ul>
+          </nav>
 
         <div class="participants">
 
-          <div class="participants__title">Participants</div>
+         
+
+          
+          <div class="separator separator-mobile"></div>
+          <div class="participants__title">Participants :</div>
+           
             <ul>
               <li class="participants__item">Alexia Lima</li>
               <li class="participants__item">Audrey da Costa</li>
@@ -36,22 +55,8 @@
               <p class="eperluette">&</p>
               <li class="participants__item">Francine Saillant,<br>Lygia Segala & Antonio Carlos Firmino</li>
             </ul>
+
           </div>
-
-
-        <nav>
-          <li class="home-nav__item"><router-link to="/idee/idee">L'idée</router-link></li>
-              
-            <div class="separator"></div>
-
-            <ul>
-                <li @click="$emit('close')"><router-link to="/hier/hier">Hier</router-link></li>
-                <li @click="$emit('close')"><router-link to="/aujourdhui/aujourdhui">Aujourd'hui</router-link></li>
-                <li @click="$emit('close')"><router-link to="/voir/voir">Voir</router-link></li>
-                <li @click="$emit('close')"><router-link to="/creer/creer">Créer</router-link></li>
-                <li @click="$emit('close')"><router-link to="/transformer/transformer">Transformer</router-link></li>
-            </ul>
-        </nav>
 
       </div>
 

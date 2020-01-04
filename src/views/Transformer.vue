@@ -1,14 +1,14 @@
 <template>
 
   <div class="container">
-  <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div> 
+  <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div>
 
   <side-bar :title="fields.title"></side-bar>
 
   <roc-header :intro="fields.intro" :title="fields.title"></roc-header>
-   
+
     <div>
-      
+
       <section class="section" v-for="(slice, index) in slices" :key="'slice-' + index">
 
         <template v-if="slice.slice_type === 'section'">
@@ -30,22 +30,23 @@
               <prismic-rich-text class="section__credit" :field="item.credit"/>
 
             </div>
-          
+
           </template>
 
           </div>
 
         </template>
-        
+
          <template v-if="slice.slice_type === 'video'">
 
-         
+
           <template v-for="(item, index) in slice.items">
 
-              <prismic-embed :field="item.video"/>
+<!--              <prismic-embed :field="item.yoo"/>-->
+<!--              <prismic-embed :field="item.videointerne"/>-->
               <prismic-rich-text class="section__description" :field="item.description2"/>
               <prismic-rich-text class="section__credit" :field="item.credit1"/>
-      
+
           </template>
 
         </template>
@@ -54,7 +55,7 @@
     </div>
 
   </div>
-  
+
 </template>
 
 <script>
@@ -79,7 +80,8 @@ export default {
             this.fields.title = document.data.title
             this.fields.intro = document.data.intro
             this.fields.image = document.data.image
-            this.fields.image = document.data.credit
+            this.fields.credit = document.data.credit
+            // this.fields.yoo = document.data.yoo
             this.slices = document.data.body
           } else {
             this.$router.push({ name: 'not-found' })

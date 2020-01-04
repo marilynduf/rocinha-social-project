@@ -57,7 +57,7 @@ Vue.component('rozeline', Rozeline);
 Vue.component('thais', Thais);
 Vue.component('willington', Willington);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
@@ -69,4 +69,4 @@ Vue.use(PrismicVue, {
 new Vue({
   router,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

@@ -7,14 +7,13 @@ var concat = require('gulp-concat');
 var csso = require('gulp-csso');
 
 gulp.task('style', function () {
-    return gulp.src('src/assets/scss/**/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(concat('all.css'))
+  return gulp.src('src/assets/scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('all.css'))
     //   .pipe(csso())
-      .pipe(gulp.dest('src/assets/css'));
+    .pipe(gulp.dest('src/assets/css'));
 });
 
-gulp.task('watch', function(){
-    gulp.watch('src/assets/scss/**/*.scss', ['style']); 
-    // Other watchers
-})
+gulp.task('watch', function () {
+  gulp.watch('src/assets/scss/**/*.scss', ['style']);
+});

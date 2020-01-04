@@ -1,14 +1,14 @@
 <template>
 
  <div class="container">
- <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div> 
+ <div @click="$emit('close')"><router-link to="/"><div class="logo-ajira">Ajira</div></router-link></div>
 
     <side-bar :title="fields.title"></side-bar>
 
     <roc-header :intro="fields.intro" :title="fields.title"></roc-header>
 
     <div>
-      
+
       <section class="section" v-for="(slice, index) in slices" :key="'slice-' + index">
 
         <template v-if="slice.slice_type === 'section'">
@@ -30,7 +30,7 @@
               <prismic-rich-text class="section__credit" :field="item.credit"/>
 
             </div>
-          
+
           </template>
 
           </div>
@@ -64,11 +64,11 @@ export default {
       this.$prismic.client.getByUID('section', uid)
         .then((document) => {
           if (document) {
-            this.documentId = document.id
-            this.fields.title = document.data.title
-            this.fields.intro = document.data.intro
-            this.fields.image = document.data.image
-            this.fields.image = document.data.credit
+            this.documentId = document.id;
+            this.fields.title = document.data.title;
+            this.fields.intro = document.data.intro;
+            this.fields.image = document.data.image;
+            this.fields.image = document.data.credit;
             this.slices = document.data.body
           } else {
             this.$router.push({ name: 'not-found' })
@@ -80,7 +80,7 @@ export default {
     this.getContent(this.$route.params.uid)
   },
   beforeRouteUpdate (to, from, next) {
-    this.getContent(to.params.uid)
+    this.getContent(to.params.uid);
     next()
   }
 }

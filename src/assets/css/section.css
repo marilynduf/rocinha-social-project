@@ -5,21 +5,28 @@
   flex-direction: column;
   margin: 0 auto;
   height: 100vh;
-  max-width: 1200px; }
-  .section__title {
-    font-family: 'Barlow Condensed', 'arial', sans-serif;
-    font-size: 4rem;
-    text-align: center;
-    color: #4697e7;
-    z-index: 999;
-    margin-top: 3rem;
-    margin-bottom: 0; }
-  .section__intro {
-    font-size: 3.4rem;
-    text-align: center;
-    line-height: 4.5rem;
-    font-family: 'Carrois Gothic', 'arial', sans-serif;
-    padding: 0rem 4rem; }
-  .section main-nav a {
-    font-size: 9rem;
-    z-index: 99; }
+  max-width: 1200px;
+}
+
+.section__title {
+  font-family: 'Barlow Condensed', 'arial', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  color: #4697e7;
+  z-index: 999;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.section__intro {
+  font-size: 3.4rem;
+  text-align: center;
+  line-height: 4.5rem;
+  font-family: 'Carrois Gothic', 'arial', sans-serif;
+  padding: 0rem 4rem;
+}
+
+.section main-nav a {
+  font-size: 9rem;
+  z-index: 99;
+}

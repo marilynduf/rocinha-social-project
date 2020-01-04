@@ -13,19 +13,18 @@ import Menu from './views/Menu.vue'
 import Idee from './views/Idee.vue'
 import Accueil from './views/Accueil.vue'
 
-
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
   routes: [
-   
+
     {
       path: '/',
       redirect: {
-         path: '/accueil', 
-         name: 'accueil', 
-         component: Accueil
+        path: '/accueil',
+        name: 'accueil',
+        component: Accueil
       }
     },
     {
@@ -96,7 +95,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: { name: 'not-found' }
+      redirect: {name: 'not-found'}
     }
   ]
 })

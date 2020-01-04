@@ -1,12 +1,11 @@
 <template>
-    <aside class="aside">
-        <div class="aside__container">
-
-            <div class="nav-wrapper">
-                <main-nav></main-nav>
-            </div>
-        </div>
-    </aside>
+  <aside class="aside">
+    <div class="aside__container">
+      <div class="nav-wrapper">
+        <main-nav/>
+      </div>
+    </div>
+  </aside>
 </template>
 
 

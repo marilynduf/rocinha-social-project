@@ -4,31 +4,33 @@ nav {
   font-size: 2.5rem;
   position: absolute;
   top: 34rem;
-  right: 6rem; }
-  /* nav li:nth-child(even) {
-    padding-left: 1.5rem; } */
+  right: 6rem;
+}
 
 .home-nav nav {
   color: #4697e7;
   font-size: 7rem;
   top: 70px;
   z-index: 99;
-  position: relative; }
-  /* .home-nav nav li:nth-child(even) {
-    padding-left: 4rem; } */
-  .home-nav nav li:hover {
-    color: #fdadba;
-    transition: 0.3s; 
-  }
+  position: relative;
+}
+
+.home-nav nav li:hover {
+  color: #fdadba;
+  transition: 0.3s;
+}
 
 nav li {
   padding-bottom: 0.6rem;
   transition: 0.3s;
-  z-index: 99; }
+  z-index: 99;
+}
 
 nav li:hover {
   color: #132444;
-  transition: 0.3s; }
+  transition: 0.3s;
+}
 
 nav li:last-child {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+}

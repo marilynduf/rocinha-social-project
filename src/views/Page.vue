@@ -36,11 +36,11 @@ export default {
       this.$prismic.client.getByUID('page', uid)
         .then((document) => {
           if (document) {
-            this.documentId = document.id
-            this.fields.title = document.data.title
-            this.fields.description = document.data.description
-            this.fields.ctaLink = document.data.cta_link
-            this.fields.ctaText = document.data.cta_text
+            this.documentId = document.id;
+            this.fields.title = document.data.title;
+            this.fields.description = document.data.description;
+            this.fields.ctaLink = document.data.cta_link;
+            this.fields.ctaText = document.data.cta_text;
             this.fields.icon = document.data.icon
           } else {
             this.$router.push({ name: 'not-found' })
@@ -52,7 +52,7 @@ export default {
     this.getContent(this.$route.params.uid)
   },
   beforeRouteUpdate (to, from, next) {
-    this.getContent(to.params.uid)
+    this.getContent(to.params.uid);
     next()
   }
 }
